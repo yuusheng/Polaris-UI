@@ -41,4 +41,14 @@ export default defineComponent({
 })
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.pl-card {
+  @apply w-72 rounded-lg bg-white overflow-hidden shadow-md pb-1;
+  &-img {
+    @apply h-40 overflow-hidden;
+    img {
+      @apply w-full h-auto relative;
+    }
+  }
+}
+</style>

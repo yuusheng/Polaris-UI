@@ -4,5 +4,13 @@ module.exports = {
   theme: {
     extend: {},
   },
+  variants: {
+    extends: {
+      border: ['focus'],
+      backgroundColor: ['active'],
+      borderColor: ['focus-visible', 'first'],
+      textColor: ['visited'],
+    },
+  },
   plugins: [],
 }

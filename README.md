@@ -1,4 +1,4 @@
-# polaire
+# Polaris-UI
 
 A UI library based on Vue3 TypeScript and TailwindCSS
 

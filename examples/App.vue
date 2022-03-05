@@ -2,13 +2,17 @@
   <div class="container">
     <h1>组件示例</h1>
     <div>{{ count }}</div>
-    <pl-button @click="handleClick">按钮</pl-button>
-    <pl-card imgSrc="ranbow1.jpg" imgCustomSet="top: -80px">
-      summary slot test
-      <template #footer>
-        <div>footer slot test</div>
-      </template>
-    </pl-card>
+    <pl-button type="" @click="handleClick">按钮</pl-button>
+    <div>
+      <pl-card imgSrc="ranbow1.jpg" imgCustomSet="top: -120px;">
+        summary slot test
+        <template #footer>
+          <div>footer slot test</div>
+        </template>
+      </pl-card>
+    </div>
+
+    <pl-checkbox>插槽</pl-checkbox>
   </div>
 </template>
 
