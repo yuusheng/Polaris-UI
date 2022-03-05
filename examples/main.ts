@@ -1,7 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import PolaireUI from '~/index'
+import PolarisUI from '~/index'
+import '~/index.css'
 
 const app = createApp(App)
-app.use(PolaireUI)
+app.use(PolarisUI)
 app.mount('#app')

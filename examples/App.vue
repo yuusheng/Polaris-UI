@@ -3,7 +3,7 @@
     <h1>组件示例</h1>
     <div>{{ count }}</div>
     <pl-button @click="handleClick">按钮</pl-button>
-    <pl-card imgSrc="u1.jpg">
+    <pl-card imgSrc="ranbow1.jpg" imgCustomSet="top: -80px">
       summary slot test
       <template #footer>
         <div>footer slot test</div>

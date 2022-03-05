@@ -1,7 +1,7 @@
 <template>
   <div class="pl-card" :style="width ? { width: width + 'px' } : {}">
     <div class="pl-card-img" :style="imgHeight ? { height: imgHeight + 'px' } : {}">
-      <img :src="imgSrc" alt="img" />
+      <img :src="imgSrc" alt="img" :style="imgCustomSet" />
     </div>
     <div v-if="summary" class="pl-card-summary">{{ summary }}</div>
     <div v-else class="pl-card-summary">
@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, watch } from 'vue'
 export default defineComponent({
   name: 'pl-card',
   props: {
@@ -32,7 +32,12 @@ export default defineComponent({
       type: String,
       default: '',
     },
+    imgCustomSet: {
+      type: String,
+      default: '',
+    },
   },
+  mounted() {},
 })
 </script>
 

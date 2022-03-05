@@ -2,7 +2,7 @@
   "name": "polaire-ui",
   "version": "0.1.0",
   "private": false,
-  "description": "基于vue3的前端组件库",
+  "description": "基于Vue3 + TypeScript + TailwindCSS的前端组件库",
   "main": "lib/index.min.js",
   "module": "lib/index.esm.js",
   "typings": "lib/index.d.ts",
@@ -20,7 +20,11 @@
     "build:esm-bundle": "rollup --config ./build/rollup.config.js"
   },
   "dependencies": {
+    "autoprefixer": "^9",
     "core-js": "^3.6.5",
+    "postcss": "^7",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "vue": "^3.0.0"
   },
   "devDependencies": {

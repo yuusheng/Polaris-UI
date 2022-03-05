@@ -1,6 +1,8 @@
 import { App } from 'vue'
 import PlButton from './button'
 import PlCard from './card'
+import './styles/public.scss'
+import './index.css'
 
 // 所有组件列表
 const components = [PlButton, PlCard]

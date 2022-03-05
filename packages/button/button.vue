@@ -8,6 +8,22 @@
 import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'pl-button',
+  props: {
+    type: {
+      type: String,
+      default: 'button',
+    },
+    size: {
+      type: String,
+      default: 'primary',
+    },
+  },
+  data() {
+    return {
+      primary: '',
+    }
+  },
+  computed: {},
 })
 </script>
 
@@ -20,8 +36,9 @@ export default defineComponent({
   width: 5rem;
   height: 2rem;
   color: $text-color;
+  box-shadow: 0 6px 10px 0 rgba(95, 101, 105, 0.25);
   &:hover {
-    background-color: red;
+    background-color: #384d76;
   }
 }
 </style>
