@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <input type="checkbox" :checked="checked" :indeterminate="disabled" @click="handleClick" class="" />
-    <label class="pl-checkbox-label mx-auto"><slot></slot></label>
-  </div>
+  <input type="checkbox" :checked="modelValue" :indeterminate="disabled" @click="handleClick" class="" />
+  <label class="pl-checkbox-label mx-auto"><slot></slot></label>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, watch, watchEffect } from 'vue'
 export default defineComponent({
   name: 'pl-checkbox',
 })
@@ -30,10 +28,18 @@ const emits = defineEmits<{
 
 const checked = ref<boolean>(props.modelValue)
 
-const handleClick = () => {
+// watch(checked, () => {
+//   emits('update:modelValue', checked.value)
+//   console.log('watch')
+// })
+const handleClick = (e: MouseEvent) => {
+  if (props.disabled) {
+    e.preventDefault()
+    return
+  }
   checked.value = !checked.value
-  // checked.value = false
   emits('update:modelValue', checked.value)
+  console.log('handleClick')
 }
 </script>
 
