@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "private": false,
   "description": "基于Vue3 + TypeScript + TailwindCSS的前端组件库",
-  "main": "lib/index.min.js",
-  "module": "lib/index.esm.js",
-  "typings": "lib/index.d.ts",
   "keyword": "vue3 ui",
   "license": "MIT",
   "author": "yuusheng <contact@yuusheng.cn>",
@@ -19,7 +16,6 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "@rollup/plugin-commonjs": "^21.0.2",
     "@typescript-eslint/eslint-plugin": "^5.13.0",
     "@typescript-eslint/parser": "^5.13.0",
     "@vitejs/plugin-vue": "^2.2.4",

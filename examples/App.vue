@@ -1,21 +1,22 @@
 <template>
+  <pl-nav navLogo="ranbow1.jpg"></pl-nav>
+  <pl-dropdown></pl-dropdown>
+  <h1>组件示例</h1>
+  <div>{{ count }}</div>
+  <pl-button @click="handleClick">按钮</pl-button>
   <div>
-    <pl-nav navLogo="ranbow1.jpg"></pl-nav>
-    <pl-dropdown></pl-dropdown>
-    <h1>组件示例</h1>
-    <div>{{ count }}</div>
-    <pl-button type="" @click="handleClick">按钮</pl-button>
-    <div>
-      <pl-card imgSrc="ranbow1.jpg" imgCustomSet="top: -120px;">
-        summary slot test
-        <template #footer>
-          <div>footer slot test</div>
-        </template>
-      </pl-card>
-    </div>
-
-    <pl-checkbox>插槽</pl-checkbox>
+    <pl-card imgSrc="ranbow1.jpg" imgCustomSet="top: -120px;">
+      summary slot test
+      <template #footer>
+        <div>footer slot test</div>
+      </template>
+    </pl-card>
   </div>
+
+  <pl-checkbox v-model="checked">插槽</pl-checkbox>
+  <div>{{ checked }}</div>
+  <pl-input v-model="input"></pl-input>
+  <div>input内容: {{ input }}</div>
 </template>
 
 <script lang="ts">
@@ -27,6 +28,8 @@ export default defineComponent({
   data() {
     return {
       count: 0,
+      checked: false,
+      input: '',
     }
   },
   methods: {
