@@ -20,7 +20,7 @@ export default defineComponent({
   },
   computed: {
     switchClass() {
-      let tempClass = []
+      let tempClass: string[] = []
       switch (this.type) {
         case 'button':
           tempClass.push('pl-btn-primary')

@@ -1,10 +1,10 @@
-import vue from 'rollup-plugin-vue'
+import vue from '@vitejs/plugin-vue'
 import typescript from 'rollup-plugin-typescript2'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
-const postcss = require('rollup-plugin-postcss')
+import postcss from 'rollup-plugin-postcss'
 import { name } from '../package.json'
 import path from 'path'
-const sass = require('node-sass')
+import sass from 'node-sass'
 import tailwindcss from 'tailwindcss'
 import postcssImport from 'postcss-import'
 import css from 'rollup-plugin-css-porter'
@@ -15,7 +15,7 @@ const overrides = {
   compilerOptions: { declaration: true },
   exclude: ['tests/**/*.ts', 'tests/**/*.tsx'],
 }
-const processSass = function (context, payload) {
+const processSass = function (context) {
   return new Promise((resolve, reject) => {
     sass.render(
       {

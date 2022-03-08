@@ -1,5 +1,7 @@
 <template>
-  <div class="container">
+  <div>
+    <pl-nav navLogo="ranbow1.jpg"></pl-nav>
+    <pl-dropdown></pl-dropdown>
     <h1>组件示例</h1>
     <div>{{ count }}</div>
     <pl-button type="" @click="handleClick">按钮</pl-button>
@@ -42,9 +44,5 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-}
-.container {
-  // display: flex;
 }
 </style>

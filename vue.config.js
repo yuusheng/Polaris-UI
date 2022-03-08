@@ -1,4 +1,4 @@
-const path = require('path')
+import path from 'path'
 
 module.exports = {
   // 修改 pages 入口

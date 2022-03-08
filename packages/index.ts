@@ -1,13 +1,17 @@
 import { App } from 'vue'
+
+// 引入组件
 import PlButton from './button'
 import PlCard from './card'
 import PlCheckbox from './checkbox'
-// import './styles/public.scss'
+import PlNav from './navbar'
+import PlDropdown from './dropdown'
+
 // TailwindCSS文件
 // import './index.css'
 
 // 所有组件列表
-const components = [PlButton, PlCard, PlCheckbox]
+const components = [PlButton, PlCard, PlCheckbox, PlNav, PlDropdown]
 
 // 定义 install 方法， App 作为参数
 const install = (app: App): void => {
@@ -15,7 +19,8 @@ const install = (app: App): void => {
   components.map((component) => app.component(component.name, component))
 }
 
-export { PlButton, PlCard, PlCheckbox }
+const obj = { ...components }
+export { obj }
 
 export default {
   install,
