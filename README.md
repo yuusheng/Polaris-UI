@@ -5,7 +5,7 @@ A UI library based on Vue3 TypeScript and TailwindCSS
 ## Clone
 
 ```
-git clone https://github.com/Kevin-Lier/polaire.git
+git clone https://github.com/yuusheng/Polaris-UI.git
 ```
 
 ## Project setup
